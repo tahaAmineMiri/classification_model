@@ -1,7 +1,7 @@
 import requests
 
 # Specify the URL of your FastAPI endpoint
-url = ""  # Update with your actual endpoint URL
+url = "http://localhost:4000"  # Update with your actual endpoint URL
 
 # Specify the file you want to upload
 file_path = "./dataset/heart_10.csv"  # Update with the path to your CSV file
@@ -14,4 +14,4 @@ with open(file_path, "rb") as file:
     response = requests.post(url, files=files)
 
 # Print the response
-print(response)
+print(response.json())
